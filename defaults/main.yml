@@ -3,3 +3,5 @@ vagrant_version: "1.9.1"
 vagrant_tmp_dir: "/opt/ansible_downloads/"
 vagrant_tmp_deb: "{{vagrant_tmp_dir}}/vagrant_{{vagrant_version}}.deb"
 vagrant_tmp_rpm: "{{vagrant_tmp_dir}}/vagrant_{{vagrant_version}}.rpm"
+# get_url not working behind poxy so disable cert validation by setting to False if necessary proxy https://github.com/ansible/ansible/issues/10941
+validate_certs:
